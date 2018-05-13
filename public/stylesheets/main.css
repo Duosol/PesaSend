@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .website-content {
@@ -197,7 +198,12 @@ input[type='email']:hover {
     padding: 1em;
     border-radius: 8px;
     background-color: white;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.form-box:hover{
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.55s ease-in-out;
 }
 
 .form-box h1 {
@@ -283,6 +289,7 @@ input.invalid {
 /* form box button */
 
 .form-box-button {
+    width: calc(100% / 2);
     padding: 0.5em 1em;
     color: #626262;
     text-transform: uppercase;
