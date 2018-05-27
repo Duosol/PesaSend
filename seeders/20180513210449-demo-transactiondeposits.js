@@ -13,22 +13,19 @@ module.exports = {
           }], {});
         */
 
-        return queryInterface.bulkInsert('Users', [{
-            firstname: 'Joe',
-            lastname: 'Mfalme',
-            email: "jj@j.j",
-            user_type_id: 1
+        return queryInterface.bulkInsert('TransactionDeposits', [{
+            user_id: 1,
+            amount: 23400,
+            email_from: 'trial@f.l'
         }, {
-            firstname: 'Jane',
-            lastname: 'Malkia',
-            email: "jj1@j.j",
-            user_type_id: 1
+            user_id: 3,
+            amount: 22000,
+            email_from: 'trial@f.l'
         }, {
-            firstname: 'Jack',
-            lastname: 'Joker',
-            email: "admin@j.j",
-            user_type_id: 1
-        }], {})
+            user_id: 2,
+            amount: 234,
+            email_from: 'trial@f.l'
+        }]);
 
     },
 
@@ -40,7 +37,7 @@ module.exports = {
           Example:
           return queryInterface.bulkDelete('Person', null, {});
         */
-        return queryInterface.bulkDelete('Users', null, {});
 
+        return queryInterface.bulkDelete('TransactionDeposits', null, {});
     }
 };

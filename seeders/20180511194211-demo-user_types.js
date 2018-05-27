@@ -13,23 +13,9 @@ module.exports = {
           }], {});
         */
 
-        return queryInterface.bulkInsert('Users', [{
-            firstname: 'Joe',
-            lastname: 'Mfalme',
-            email: "jj@j.j",
-            user_type_id: 1
-        }, {
-            firstname: 'Jane',
-            lastname: 'Malkia',
-            email: "jj1@j.j",
-            user_type_id: 1
-        }, {
-            firstname: 'Jack',
-            lastname: 'Joker',
-            email: "admin@j.j",
-            user_type_id: 1
-        }], {})
-
+        return queryInterface.bulkInsert('UserTypes', [{
+            user_type: 'Normal',
+        }])
     },
 
     down: (queryInterface, Sequelize) => {
@@ -40,7 +26,5 @@ module.exports = {
           Example:
           return queryInterface.bulkDelete('Person', null, {});
         */
-        return queryInterface.bulkDelete('Users', null, {});
-
     }
 };

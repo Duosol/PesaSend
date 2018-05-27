@@ -8,6 +8,16 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            user_type_id: {
+                type: Sequelize.INTEGER,
+                // allowNull: false,
+                onDelete: "SET NULL",
+                onUpdate: "CASCADE",
+                references: {
+                    model: 'UserTypes',
+                    key: 'id'
+                }
+            },
             firstname: {
                 type: Sequelize.STRING
             },
@@ -23,13 +33,14 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             phone: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false
             },
-            createdAt: {
+            created_at: {
                 allowNull: false,
                 type: Sequelize.DATE
             },
-            updatedAt: {
+            updated_at: {
                 allowNull: false,
                 type: Sequelize.DATE
             }
