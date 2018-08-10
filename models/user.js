@@ -7,15 +7,16 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        // user_type_id: {
+        // userTypeId: {
         //     type: DataTypes.INTEGER,
         //     allowNull: false,
         //     onDelete: "SET NULL",
         //     onUpdate: "CASCADE",
-        //     references: {
-        //         model: 'UserType',
-        //         key: 'id'
-        //     }
+        //     field: 'user_type_id'
+        //         // references: {
+        //         //     model: 'UserType',
+        //         //     key: 'id'
+        //         // }
         // },
         firstname: DataTypes.STRING,
         lastname: DataTypes.STRING,
@@ -44,11 +45,12 @@ module.exports = (sequelize, DataTypes) => {
         User.belongsTo(models.UserType, {
             onDelete: "SET NULL",
             foreignKey: {
+                fieldName: "user_type_id",
                 allowNull: false
             }
         });
 
-        User.hasMany(models.TransactionDeposit);
+        // User.hasMany(models.TransactionDeposit);
     };
     return User;
 };

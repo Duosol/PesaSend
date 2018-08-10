@@ -8,6 +8,10 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            // UserTypeId: {
+            //     type: Sequelize.INTEGER,
+            //     allowNull: true,
+            // },
             user_type_id: {
                 type: Sequelize.INTEGER,
                 // allowNull: false,
@@ -33,7 +37,7 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             phone: {
-                type: Sequelize.INTEGER,
+                type: Sequelize.STRING,
                 allowNull: false
             },
             created_at: {

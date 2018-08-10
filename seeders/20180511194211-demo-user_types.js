@@ -14,7 +14,11 @@ module.exports = {
         */
 
         return queryInterface.bulkInsert('UserTypes', [{
-            user_type: 'Normal',
+            user_type: 'Admin',
+        }, {
+            user_type: 'Enterprise',
+        }, {
+            user_type: 'Mwananchi',
         }])
     },
 

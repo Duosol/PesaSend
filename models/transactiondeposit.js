@@ -22,11 +22,12 @@ module.exports = (sequelize, DataTypes) => {
     TransactionDeposit.associate = function(models) {
         // associations can be defined here
 
-        TransactionDeposit.belongsTo(models.User);
+        // TransactionDeposit.belongsTo(models.User);
 
         TransactionDeposit.belongsTo(models.User, {
-            onDelete: "CASCADE",
+            onDelete: "SET NULL",
             foreignKey: {
+                fieldName: "user_id",
                 allowNull: false
             }
         });

@@ -22,12 +22,12 @@ module.exports = {
             firstname: 'Jane',
             lastname: 'Malkia',
             email: "jj1@j.j",
-            user_type_id: 1
+            user_type_id: 2
         }, {
             firstname: 'Jack',
             lastname: 'Joker',
             email: "admin@j.j",
-            user_type_id: 1
+            user_type_id: 3
         }], {})
 
     },

@@ -12,6 +12,7 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 allowNull: true,
                 onDelete: "CASCADE",
+                onUpdate: "CASCADE",
                 references: {
                     model: 'Users',
                     key: 'id'
@@ -32,11 +33,11 @@ module.exports = {
             number_to: {
                 type: Sequelize.INTEGER
             },
-            createdAt: {
+            created_at: {
                 allowNull: false,
                 type: Sequelize.DATE
             },
-            updatedAt: {
+            updated_at: {
                 allowNull: false,
                 type: Sequelize.DATE
             }
